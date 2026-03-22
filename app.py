@@ -4,113 +4,181 @@ import plotly.express as px
 from modules import BulletEngine, ScriptAudit
 
 # --- 1. SCRIPT DATABASE ---
+
 SCRIPTS = {
     "--- Choose a Script ---": "",
 
     "John":
-    """**SCENE 1**
     
-    **INT. BEDROOM - DAY**
-    
-    JOHN PROTAGONIST (25, very handsome with blue eyes and a muscular build that shows he works out) wakes up. He looks in the mirror and talks to himself so the audience knows who he is.
-    
-    **JOHN**
-    (to the mirror)
-    Well, John, today is the day. Since my parents died in that mysterious fire ten years ago that the police never solved, I have been waiting to find the Orb of Dark Destiny. I am a lonely loner who doesn't need anyone, except for my best friend who is about to walk in.
-    
-    **BEST FRIEND** walks in. His name is BILL. He is wearing a shirt that says "I AM THE COMIC RELIEF."
-    
-    **BILL**
-    Hey John! As you know, we are both graduates of the Space Academy where we learned how to fly ships and also how to fight with lasers. Are you ready for our mission to the Planet of Doom?
-    
-    **JOHN**
-    I am ready, Bill. But first, I must feel an emotion. 
-    
-    John looks at a photo of a woman. 
-    
-    **JOHN**
-    I miss my wife. She was so beautiful before the aliens took her.
-    
-    **BILL**
-    That is sad. But look! An explosion!
-    
-    **EXT. SPACE - CONTINUOUS**
-    
-    A giant explosion happens in space. It is very loud, even though there is no sound in space, but the characters hear it anyway. 
-    
-    **BILL**
-    Oh no! The villains are here! It is the Evil Emperor Malice!
-    
-    **INT. EVIL SHIP - SAME TIME**
-    
-    **EMPEROR MALICE** sits on a throne made of skulls. He looks at the camera.
-    
-    **EMPEROR MALICE**
-    I am evil! I will find the Orb and then I will rule the galaxy because I want to be in charge of everything. Guards! Execute Plan Alpha-Beta-9 because that is the plan that is bad for the heroes!
-    
-    **SCENE 2**
-    
-    **INT. THE PLANET OF DOOM - TEN MINUTES LATER**
-    
-    John and Bill are already there. They didn't have to travel. They are just there now.
-    
-    **JOHN**
-    Wait, I see the Orb. It is right there on that pedestal that isn't guarded by anyone.
-    
-    **BILL**
-    Wow, that was easy. I hope nothing ironic happens.
-    
-    Suddenly, a giant robot falls from the ceiling. 
-    
-    **ROBOT**
-    I AM A ROBOT. I WILL KILL YOU NOW.
-    
-    **JOHN**
-    Not if I use my secret power that I never mentioned until this exact second!
-    
-    John glows bright green. The robot explodes instantly.
-    
-    **BILL**
-    Wow, John. You are the chosen one.
-    
-    **JOHN**
-    I know. Let’s go get lunch.
-    
-    **FADE OUT.**
-    
-    **THE END.**""",
 
-    "The Abyss-7 ": """Title: THE ABYSS-7 PROTOCOL
-    Characters: 
-    DR. ARIS (50s, weary, hiding a secret)
-    LEO (20s, nervous, high-strung technician)
+                """**SCENE 1**
+                
+                **INT. BEDROOM - DAY**
+                
+                JOHN PROTAGONIST (25, very handsome with blue eyes and a muscular build that shows he works out) wakes up. He looks in the mirror and talks to himself so the audience knows who he is.
+                
+                **JOHN**
+                (to the mirror)
+                Well, John, today is the day. Since my parents died in that mysterious fire ten years ago that the police never solved, I have been waiting to find the Orb of Dark Destiny. I am a lonely loner who doesn't need anyone, except for my best friend who is about to walk in.
+                
+                **BEST FRIEND** walks in. His name is BILL. He is wearing a shirt that says "I AM THE COMIC RELIEF."
+                
+                **BILL**
+                Hey John! As you know, we are both graduates of the Space Academy where we learned how to fly ships and also how to fight with lasers. Are you ready for our mission to the Planet of Doom?
+                
+                **JOHN**
+                I am ready, Bill. But first, I must feel an emotion. 
+                
+                John looks at a photo of a woman. 
+                
+                **JOHN**
+                I miss my wife. She was so beautiful before the aliens took her.
+                
+                **BILL**
+                That is sad. But look! An explosion!
+                
+                **EXT. SPACE - CONTINUOUS**
+                
+                A giant explosion happens in space. It is very loud, even though there is no sound in space, but the characters hear it anyway. 
+                
+                **BILL**
+                Oh no! The villains are here! It is the Evil Emperor Malice!
+                
+                **INT. EVIL SHIP - SAME TIME**
+                
+                **EMPEROR MALICE** sits on a throne made of skulls. He looks at the camera.
+                
+                **EMPEROR MALICE**
+                I am evil! I will find the Orb and then I will rule the galaxy because I want to be in charge of everything. Guards! Execute Plan Alpha-Beta-9 because that is the plan that is bad for the heroes!
+                
+                **SCENE 2**
+                
+                **INT. THE PLANET OF DOOM - TEN MINUTES LATER**
+                
+                John and Bill are already there. They didn't have to travel. They are just there now.
+                
+                **JOHN**
+                Wait, I see the Orb. It is right there on that pedestal that isn't guarded by anyone.
+                
+                **BILL**
+                Wow, that was easy. I hope nothing ironic happens.
+                
+                Suddenly, a giant robot falls from the ceiling. 
+                
+                **ROBOT**
+                I AM A ROBOT. I WILL KILL YOU NOW.
+                
+                **JOHN**
+                Not if I use my secret power that I never mentioned until this exact second!
+                
+                John glows bright green. The robot explodes instantly.
+                
+                **BILL**
+                Wow, John. You are the chosen one.
+                
+                **JOHN**
+                I know. Let’s go get lunch.
+                
+                **FADE OUT.**
+                
+                **THE END.**""",
+                
 
-    [SCENE 1: THE CONTROL ROOM]
-    The room is a claustrophobic cage of blinking LED arrays and ancient CRT monitors. Outside the thick reinforced glass, there is only the absolute black of the Hadal Zone.
-    ARIS: (Whispering) Seventy-two hours without a sun. It changes the way your blood moves, Leo.
-    LEO: (Typing frantically) My blood is moving fine. It’s the sonar that’s bleeding. Look at the return signal.
-    Aris leans over. A rhythmic pulse—thump... thump... thump—echoes through the speakers.
-    LEO: That’s not a whale. It’s too consistent. It’s five hundred tons of mass moving at forty knots.
-    ARIS: (Coldly) It’s the Abyss-7 protocol. It was always going to wake up.
-    LEO: (Stops typing) Protocol? Aris, we’re three hundred meters below the crush depth of a nuclear sub. This station is held together by hope and rusted titanium. What 'protocol' involves a leviathan circling our hull?
-    ARIS: The research grant wasn't for silt, Leo. The Company wanted to know what happened to the 2021 expedition. They didn't vanish. They were harvested.
-    LEO: Harvested? By what?
-    ARIS: (Points to the screen) By the thing that’s currently looking for the airlock.
-    """,
 
-    "Pyaar Ka Server ": """Title: PYAAR KA SERVER: A TECH ROMANCE
-    Characters: 
-    RAHUL (An obsessed coder who speaks in metaphors)
-    PRIYA (A woman who is tired of tech-jargon)
-    SIMI (Priya’s best friend, the 'Insta-influencer' type)
-    """,
+    "The Abyss-7 ": """
+Title: THE ABYSS-7 PROTOCOL
+Characters: 
+DR. ARIS (50s, weary, hiding a secret)
+LEO (20s, nervous, high-strung technician)
 
-    "Blood & Dust ": """Title: BLOOD & DUST
-    Characters: 
-    HUMAYUN (A man with a blood-stained past)
-    VICKY (His younger, naive brother)
-    CHAUHAN (The ruthless landlord)
-    """
+[SCENE 1: THE CONTROL ROOM]
+The room is a claustrophobic cage of blinking LED arrays and ancient CRT monitors. Outside the thick reinforced glass, there is only the absolute black of the Hadal Zone.
+ARIS: (Whispering) Seventy-two hours without a sun. It changes the way your blood moves, Leo.
+LEO: (Typing frantically) My blood is moving fine. It’s the sonar that’s bleeding. Look at the return signal.
+Aris leans over. A rhythmic pulse—thump... thump... thump—echoes through the speakers.
+LEO: That’s not a whale. It’s too consistent. It’s five hundred tons of mass moving at forty knots.
+ARIS: (Coldly) It’s the Abyss-7 protocol. It was always going to wake up.
+LEO: (Stops typing) Protocol? Aris, we’re three hundred meters below the crush depth of a nuclear sub. This station is held together by hope and rusted titanium. What 'protocol' involves a leviathan circling our hull?
+ARIS: The research grant wasn't for silt, Leo. The Company wanted to know what happened to the 2021 expedition. They didn't vanish. They were harvested.
+LEO: Harvested? By what?
+ARIS: (Points to the screen) By the thing that’s currently looking for the airlock.
+
+[SCENE 2: THE AIRLOCK CORRIDOR]
+The hum of the station has shifted to a low-frequency vibration that rattles the teeth.
+LEO: We need to launch the pods! Now! 
+ARIS: There are no pods. I ejected them while you were sleeping.
+LEO: (Lunging at Aris) You what?! You’ve trapped us here to die!
+ARIS: Not to die. To witness. Today I learned the truth about the surface accident five years ago. It wasn't your fault, Leo. The sonar pulses they were testing... they were calling it. Your father didn't die in a wreck. He died as an offering.
+LEO: (Frozen) My father... he knew?
+ARIS: He was the first to hear the tapping. And now, it’s your turn.
+
+[SCENE 3: THE OBSERVATION DECK]
+A massive window looks out. A flash of bioluminescence—violent purple—reveals a giant, lidless eye. The glass cracks. A single, spiderweb fracture.
+LEO: It’s coming through the pressure seal...
+ARIS: Let it in. Open the outer vent.
+LEO: (Hand over the manual override) If I do this, we’re gone in three seconds.
+ARIS: But the data will survive. The truth will be free.
+The eye outside dilates, filling the entire window. The glass groans.
+LEO: Aris... I can't.
+ARIS: Then I will. 
+Aris lunges. The glass shatters. 
+[FADE TO BLACK]
+""",
+
+    "Pyaar Ka Server ": """
+Title: PYAAR KA SERVER: A TECH ROMANCE
+Characters: 
+RAHUL (An obsessed coder who speaks in metaphors)
+PRIYA (A woman who is tired of tech-jargon)
+SIMI (Priya’s best friend, the 'Insta-influencer' type)
+
+[SCENE 1: COFFEE SHOP - BANDRA]
+RAHUL: Priya, tum samajh kyun nahi rahi ho? Mera dil ek legacy system hai aur tum uska latest OS update ho.
+PRIYA: Rahul, please. Bas ek baar... just once... can we talk like normal humans? Bina kisi 'version' ya 'patch' ke?
+SIMI: (Entering, holding a selfie stick) Omg guys! The lighting here is literally fire. Rahul, why is your face looking like a 240p video? 
+RAHUL: Simi, main Priya ko samjha raha hoon. Humara connection hamesha 'Limited Connectivity' dikhata hai because humara bandwidth match nahi kar raha.
+PRIYA: (Standing up) Bandwidth?! Rahul, humari date thi! Maine dress pehni, perfume lagaya, aur tum teen ghante tak mujhse 'cloud storage' aur 'firewall' ki baatein kar rahe ho!
+RAHUL: Par Priya, maine apne memory se saari purani 'ex-girlfriend.exe' files delete kar di hain! Sirf tumhare liye!
+SIMI: Eww, Rahul. That is so 2015. Priya, block him. Direct spam folder mein daalo.
+PRIYA: Sahi keh rahi hai Simi. Rahul, Error 404: My feelings for you not found.
+RAHUL: (Desperate) Priya, wait! Main apna code rewrite kar dunga! Main Python seekh lunga agar tumhe Java pasand nahi!
+PRIYA: It’s not about the language, Rahul. It’s about the soul. Aur tumhari soul mein bas ek logic gate hai. Goodbye.
+SIMI: (To her camera) Guys, live breakup alert! Subscribe for part 2!
+RAHUL: Priya! Signal mat todo! Mera server crash ho jayega!
+[Rahul falls to his knees. The coffee shop is silent. He starts typing on his laptop.]
+RAHUL: (Whispering) If Priya == False: Life.exit()...
+""",
+
+    "Blood & Dust ": """
+Title: BLOOD & DUST
+Characters: 
+HUMAYUN (A man with a blood-stained past)
+VICKY (His younger, naive brother)
+CHAUHAN (The ruthless landlord)
+
+[SCENE 1: THE DUSTY OUTPOST]
+The sun is a blinding white coin in the sky. Humayun is cleaning a rusted machete.
+VICKY: Bhai, Chauhan ke aadmi gully ke nukkad pe khade hain. Woh keh raha hai ki aaj zameen khali karni hogi.
+HUMAYUN: (Without looking up) Chauhan ko bolo... zameen mitti se banti hai, aur mitti khoon maangti hai.
+VICKY: Hum lad nahi sakte. Unke paas videshi bandookein hain. Humare paas sirf ye loha hai.
+HUMAYUN: Loha mard ke haath mein ho toh bandook se zyada shor karta hai, Vicky. 
+VICKY: Maa darr rahi hai. Woh kehti hai hum shahar chale jaate hain. Wahan koi humein nahi pehchanega.
+HUMAYUN: Shahar mein pehchan nahi milti, sirf bheed milti hai. Main sher hoon, bheed ka hissa nahi banunga.
+
+[SCENE 2: THE CONFRONTATION]
+Chauhan arrives in a black SUV. Dust clouds follow him. He steps out, smoking a cigar.
+CHAUHAN: Humayun! Bahut purani dushmani hai hamari. Kyun apne bhai ki jawani mitti mein mila raha hai?
+HUMAYUN: (Stepping forward) Chauhan, tune mere baap ki pagdi utari thi. Aaj main tera guroor utarunga.
+CHAUHAN: (Laughing) Dekho isse. Aaj bhi wahi purani baatein. Duniya badal gayi hai, lekin tum gully ke gunde wahi ho.
+VICKY: (Aiming a shaky pistol) Peeche hat jao, Chauhan!
+CHAUHAN: (To his guards) Is bacche ko khamosh karo.
+A guard raises his rifle. Humayun moves like lightning. The machete flashes in the sun.
+HUMAYUN: Vicky, peeche hat! 
+The first shot rings out. The dust turns red.
+HUMAYUN: Chauhan! Aaj maut faisla karegi ki ye zameen kiski hai!
+[A massive brawl breaks out in slow motion. The rain starts to fall, mixing with the dust.]
+[FADE OUT]
+"""
 }
 
 
