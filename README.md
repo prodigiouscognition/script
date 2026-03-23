@@ -63,8 +63,8 @@ If granted additional development time, the following features are prioritized f
 
 1.  **Clone the Repo:**
     ```bash
-    git clone [https://github.com/your-username/bullet-intel.git](https://github.com/your-username/bullet-intel.git)
-    cd bullet-intel
+    git clone [https://github.com/prodigiouscognition/script](https://github.com/prodigiouscognition/script)
+    cd script
     ```
 2.  **Install Dependencies:**
     ```bash
